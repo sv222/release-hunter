@@ -38,10 +38,10 @@ rh -t <your-token>
 
 All available versions for different operating systems can be found in releases [here](https://github.com/sv222/release-hunter/releases)
 
-To install Release Hunter, use the following commands (Linux/amd64 example):
+To install Release Hunter, use the following commands (linux_amd64 example):
 
 ```sh
-curl -L -o rh https://github.com/sv222/release-hunter/releases/download/v0.1.0/rh-amd64 && chmod +x rh && sudo mv rh /usr/local/bin/rh
+curl -L -o rh https://github.com/sv222/release-hunter/releases/download/v0.1.0/release_hunter_0.1.0_linux_amd64 && chmod +x rh && sudo mv rh /usr/local/bin/rh
 ```
 
 ## Usage
@@ -51,20 +51,21 @@ curl -L -o rh https://github.com/sv222/release-hunter/releases/download/v0.1.0/r
 Search for GitHub repositories using a keyword:
 
 ```sh
-rh -find <keyword>
+rh -f <keyword>
 ```
 
-For example, to search for repositories related to Jenkins:
+For example, to search for repositories related to Podman:
 
 ```sh
-rh -find jenkins
+rh -f podman
 ```
 
-Filter a search result by the keyword "java":
+Filter a search result by the keyword "desktop":
 
 ```sh
-rh -find jenkins -k java
+rh -find podman -k desktop
 ```
+Copy <user/repo> for found repo "containers/podman-desktop".
 
 ### Get the Latest Release for a Repository
 
@@ -74,16 +75,16 @@ Retrieve the latest release for a specific GitHub repository:
 rh -repo <user/repo>
 ```
 
-For example, to get the latest release for "helm":
+For example, to get the latest release for "podman-desktop":
 
 ```sh
-rh -repo helm/helm
+rh -repo containers/podman-desktop
 ```
 
-Filter result links by keyword "arm":
+Filter the resulting links using the keyword "arm":
 
 ```sh
-rh -repo helm/helm -k arm
+rh -repo containers/podman-desktop -k arm
 ```
 
 ## Contributing
