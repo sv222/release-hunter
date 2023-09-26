@@ -2,11 +2,13 @@
 
 Release Hunter is a Go-based command-line tool that helps you discover latest GitHub releases for any software. You can use it to search for GitHub repositories by keyword and access direct download URLs for release assets.
 
-![Alt text](/extras/rh_logo.png)
+![Release Hunter LOGO](/extras/rh_logo.png)
 
 ## Command-Line Flags and Aliases
 
 - `-help, -h`: Show usage and examples.
+
+- `-version, -v`: Show the version of the CLI.
 
 - `-token, -t <token>`: GitHub personal access token.
 
@@ -86,6 +88,7 @@ Filter the resulting links using the keyword "arm":
 ```sh
 rh -repo containers/podman-desktop -k arm
 ```
+![How to use GIF](/extras/rh_usage.gif)
 
 ## Contributing
 
