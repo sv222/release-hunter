@@ -90,6 +90,38 @@ rh -repo containers/podman-desktop -k arm
 ```
 ![How to use GIF](/extras/rh_usage.gif)
 
+## Docker Usage
+
+To run the Release Hunter CLI within a Docker container, follow these steps:
+
+### Step 1: Build the Docker Image
+
+1. Make sure you have Docker installed on your system.
+
+2. Clone a project locally:
+
+    ```sh
+    git clone https://github.com/sv222/release-hunter.git
+    ```
+
+3. Open a terminal and navigate to the root directory of the project where the Dockerfile is located.
+
+4. Build the Docker image using the following command:
+
+```sh
+docker build -t rh .
+```
+
+### Step 2: Run the Docker Container
+
+Once the Docker image is built, you can run the Release Hunter CLI inside a Docker container with the desired flags and arguments.
+
+Example command to run the container with flags and arguments:
+
+```sh
+docker run --rm rh -t <your-github-token> -r <user/repo>
+```
+
 ## Contributing
 
 We welcome contributions from the community. If you have ideas, bug reports, or feature requests, please open an issue or submit a pull request.
